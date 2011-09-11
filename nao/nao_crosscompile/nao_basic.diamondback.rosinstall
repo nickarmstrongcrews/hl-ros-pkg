@@ -1,0 +1,9 @@
+[
+{'svn': {'local-name': 'ros', 'uri': 'https://code.ros.org/svn/ros/stacks/ros/tags/ros-1.4.9'}},
+{'svn': {'local-name': 'ros_comm', 'uri': 'https://code.ros.org/svn/ros/stacks/ros_comm/tags/ros_comm-1.4.7'}},
+{'hg': {'local-name': 'geometry', 'version': 'geometry-1.4.2', 'uri': 'https://kforge.ros.org/geometry/geometry'}},
+{'svn': {'local-name': 'common_msgs', 'uri': 'https://code.ros.org/svn/ros-pkg/stacks/common_msgs/tags/diamondback'}},
+{'svn': {'local-name': 'image_common', 'uri': 'https://code.ros.org/svn/ros-pkg/stacks/image_common/tags/diamondback'}},
+{'svn': {'local-name': 'common', 'uri': 'https://code.ros.org/svn/ros-pkg/stacks/common/tags/diamondback'}},
+]
+

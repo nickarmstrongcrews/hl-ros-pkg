@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="nao_camera" type="nao_camera" name="nao_camera" output="screen" />
+
+</launch>

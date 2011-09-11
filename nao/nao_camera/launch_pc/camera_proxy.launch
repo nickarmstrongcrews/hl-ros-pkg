@@ -1,0 +1,22 @@
+<!-- This subscribes to a remote camera source on the robot and acts as a local camera source. -->
+<!-- Specifically, this does JPEG encoding (to handle low-bandwidth wifi) and UDP relay (to handle flaky wifi) -->
+
+<launch>
+
+  <node pkg="topic_tools" type="relay" name="remote_cam_udp_relay"
+        args="/nao/camera /nao/udp/cam" output="screen" >
+    <param name="unreliable" value="true" />
+    <param name="lazy" value="true" />
+  </node>
+
+  <node pkg="image_transport" type="republish" name="nao_camera_republish" args="raw" output="screen" >
+    <remap from="in" to="/nao/udp/cam" />
+    <remap from="out" to="/robot/cam" />
+  </node>
+
+<!--
+  <node pkg="rviz" type="rviz" name="$(anon rviz)" respawn="true"
+        args="-d $(find nao_camera)/nao_camera_debug.vcg" />
+-->
+
+</launch>
