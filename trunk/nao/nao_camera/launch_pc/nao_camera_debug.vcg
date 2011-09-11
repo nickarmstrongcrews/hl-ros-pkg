@@ -1,0 +1,35 @@
+Background\ ColorR=0
+Background\ ColorG=0
+Background\ ColorB=0
+Fixed\ Frame=/odom
+Target\ Frame=/base_footprint
+ImageCompressed.Enabled=1
+ImageCompressed.Image\ Topic=/robot/cam
+ImageCompressed.Transport\ Hint=compressed
+ImageRaw.Enabled=1
+ImageRaw.Image\ Topic=/nao/camera
+ImageRaw.Transport\ Hint=raw
+Robot\ Model.Alpha=1
+Robot\ Model.Collision\ Enabled=0
+Robot\ Model.Enabled=0
+Robot\ Model.Robot\ Description=robot_description
+Robot\ Model.TF\ Prefix=
+Robot\ Model.Update\ Interval=0
+Robot\ Model.Visual\ Enabled=1
+Tool\ 2D\ Nav\ GoalTopic=goal
+Tool\ 2D\ Pose\ EstimateTopic=initialpose
+Camera\ Type=rviz::OrbitViewController
+Camera\ Config=0.944596 2.42943 1.37558 0.0378808 0.104776 -0.0455418
+Property\ Grid\ State=selection=ImageCompressed.Enabled;expanded=.Global Options,ImageRaw.Enabled,ImageCompressed.Enabled,Robot Model.Enabled.Robot Model.StatusTopStatus,Robot Model.Enabled.Robot: Robot ModelLinks;scrollpos=0,0;splitterpos=150,301;ispageselected=1
+[Display0]
+Name=ImageRaw
+Package=rviz
+ClassName=rviz::ImageDisplay
+[Display1]
+Name=ImageCompressed
+Package=rviz
+ClassName=rviz::ImageDisplay
+[Display2]
+Name=Robot Model
+Package=rviz
+ClassName=rviz::RobotModelDisplay

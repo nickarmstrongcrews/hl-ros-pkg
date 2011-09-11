@@ -1,0 +1,17 @@
+<package>
+  <description brief="nao_camera">
+
+     Bridges between Nao's camera feed and ROS.
+
+  </description>
+  <author>Nick Armstrong-Crews</author>
+  <license>Apache 2</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/nao_camera</url>
+
+  <depend package="roscpp"/>
+  <depend package="image_transport"/>
+
+</package>
+
+
