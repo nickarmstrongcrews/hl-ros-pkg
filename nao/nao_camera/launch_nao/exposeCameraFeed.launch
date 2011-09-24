@@ -1,5 +1,7 @@
 <launch>
 
-  <node pkg="nao_camera" type="nao_camera" name="nao_camera" output="screen" />
+  <node pkg="nao_camera" type="nao_camera" name="nao_camera" output="screen" >
+    <param name="fps" type="int" value="1" />
+  </node>
 
 </launch>

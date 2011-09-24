@@ -8,8 +8,14 @@ int main(int argc, char** argv)
 {
     ros::init(argc, argv, "nao_camera_node");
     ros::NodeHandle nh("~");
+
+     int fps;
+     nh.param("fps", fps, 5);
+//     if(fps != 5 && fps != 10 && fps != 15 && fps != 30) fps = 5;
+
+
     image_transport::ImageTransport it(nh);
-    image_transport::Publisher pub = it.advertise("/nao/camera", 1);
+    image_transport::Publisher pub = it.advertise("/nao/camera", 1); // only queue most recent frame
 
     // Connecting to video module
     AL::ALPtr<AL::ALVideoDeviceProxy> camera(new AL::ALVideoDeviceProxy("127.0.0.1", 9559));
@@ -29,10 +35,10 @@ int main(int argc, char** argv)
         // vision module required among : 5, 10, 15, and 30 fps.
         // (AL note: this field has no effect right now but will be implemented
         // in a future version)
-        5
+        fps
     );
 
-    ros::Rate loop_rate(1); // 1 fps, to save robot CPU, wifi bandwidth
+    ros::Rate loop_rate(fps);
 
     while (nh.ok()) {
 

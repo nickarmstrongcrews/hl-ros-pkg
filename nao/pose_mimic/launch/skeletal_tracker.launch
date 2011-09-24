@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- launch kinect sensor -->
+  <include file="$(find openni_camera)/launch/openni_node.launch"/>
+
+  <node pkg="skeletal_tracker" type="tracker" name="skel_tracker"
+        output="screen" respawn="true" />
+
+  <!-- <node pkg="dynamic_reconfigure" type="dynparam" name="ressetter" args="set /openni_camera point_cloud_resolution 1" /> -->
+
+</launch>
