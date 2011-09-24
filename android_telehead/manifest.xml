@@ -1,0 +1,27 @@
+<package>
+  <description brief="android_telehead">
+
+    Teleoperate robot's head with an android phone
+
+  </description>
+  <author>Nick Armstrong-Crews</author>
+  <license>Apache 2</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/android_telehead</url>
+
+  <depend package="rosjava"/>
+  <depend package="android"/>
+  <depend package="joy"/>
+  <depend package="nao_msgs"/>
+
+  <export>
+    <rosjava-android-app target="android-10"/>
+    <rosjava-src location="src" />
+    <rosjava-src location="gen" />
+    <rosjava-src location="res" />
+    <!--<rosjava-pathelement location="dist/my_package.jar" built="true" />-->
+    <rosjava-depend location="/usr/share/java/vecmath.jar" />
+    <rosjava-artifact groupId="org.ros.rosjava.android" artifactId="org.ros.rosjava.android.telehead" />
+  </export>
+
+</package>
