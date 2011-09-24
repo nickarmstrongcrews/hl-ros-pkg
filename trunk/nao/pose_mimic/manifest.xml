@@ -1,0 +1,30 @@
+<package>
+  <description brief="pose_mimic">
+
+    The Nao mimic the body pose of the user, as captured by the Kinect/openni.
+
+  </description>
+  <author>Nick Armstrong-Crews</author>
+  <license>MIT 2</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pose_mimic</url>
+  <depend package="body_msgs"/>
+  <depend package="skeletal_tracker"/>
+
+  <depend package="roscpp"/>
+  <depend package="roslib"/>
+  <depend package="std_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="tf"/>
+  <depend package="nao_ctrl"/>
+  <depend package="nao_description"/>
+  <depend package="nao_msgs"/>
+  <depend package="message_filters"/>
+  <depend package="robot_state_publisher"/>
+  <depend package="openni"/>
+
+
+</package>
+
+

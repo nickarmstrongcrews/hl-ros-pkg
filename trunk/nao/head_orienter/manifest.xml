@@ -1,0 +1,20 @@
+<package>
+  <description brief="head_orienter">
+
+    Takes the orientation from a Pose message (e.g., as published by an Android phone), and translates it to a HeadAngle (e.g., for a Nao robot)
+
+  </description>
+  <author>Nick Armstrong-Crews</author>
+  <license>Apache 2</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/head_orienter</url>
+
+  <depend package="rospy"/>
+  <depend package="tf"/>
+  <depend package="geometry_msgs"/>
+  <depend package="bullet"/>
+  <depend package="nao_msgs"/>
+
+</package>
+
+

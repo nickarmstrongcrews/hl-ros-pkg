@@ -1,0 +1,19 @@
+<launch>
+
+  <include file="$(find pose_mimic)/launch/skeletal_tracker.launch" />
+
+  <!-- pretend kinect starts at same spot as robot -->
+  <!-- (just to have single rviz display) -->
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_openni"
+        args="0 0 0 0 0 0 /odom /openni_camera 100" />
+
+  <node pkg="pose_mimic" type="pose_mimic" name="pose_mimic" output="screen" >
+<!--
+    <remap from="/cmd_vel" to="/dev/null/cmd_vel" />
+-->
+    <remap from="/head_angles" to="/dev/null/head_angles" />
+    <remap from="/motion_command_btn" to="/dev/null/motion_command_btn" />
+    <remap from="/speech" to="/dev/null/speech" />
+  </node>
+
+</launch>
