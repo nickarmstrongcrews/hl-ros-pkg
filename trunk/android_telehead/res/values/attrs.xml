@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<declare-styleable name="OverlayView">
+
+		<attr name="overlayClass" format="string" />
+		<attr name="minWidth" format="integer" />
+		<attr name="minHeight" format="integer" />
+		<attr name="maxWidth" format="integer" />
+		<attr name="maxHeight" format="integer" />
+
+	</declare-styleable>
+
+	<declare-styleable name="Overlay">
+	
+		<attr name="horizontalJustification" format="string" />
+		<attr name="verticalJustification" format="string" />
+	
+	</declare-styleable>
+
+</resources>
